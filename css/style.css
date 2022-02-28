@@ -1,6 +1,13 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css?family=Orbitron');
 
+/* Animation */
+@keyframes ani {
+    0% {transform: rotateY(0deg);}
+    100% {transform: rotateY(360deg);}
+}
+
+/* Init */
 * { 
     margin: 0;  
     padding: 0;
@@ -42,6 +49,9 @@ body {
     left: 50%;
     margin-top: -400px;
     margin-left: -300px;
+    /* perspective: 1300px; */
+    transform-style: preserve-3d;
+    animation: ani linear 30s infinite;
 }
 .wrap #circle article {
     width: 100%;
@@ -49,7 +59,7 @@ body {
     position: absolute;
     top: 0px;
     left: 0px;
-    display: none;
+    backface-visibility: hidden;
 }
 .wrap #circle article h1 {
     position: absolute;
@@ -88,7 +98,7 @@ body {
 
 /* face1 */
 .wrap #circle .face1 {
-    display: none;
+    display: block;
 }
 .wrap #circle .face1 .inner>div {
     width: 290px;
@@ -124,7 +134,7 @@ body {
 
 /* face2 */
 .wrap #circle .face2 {
-    display: none;
+    display: block;
 }
 .wrap #circle .face2 .inner>div {
     width: 100%;
@@ -146,7 +156,7 @@ body {
 
 /* face3 */
 .wrap #circle .face3 {
-    display: none;
+    display: block;
 }
 .wrap #circle .face3 .inner>div {
     width: 100%;
@@ -198,7 +208,7 @@ body {
 
 /* face4 */
 .wrap #circle .face4 {
-    display:none;
+    display:block;
 }
 .wrap #circle .face4 .inner>div p {
     font: 16px/1.3 "arial";
@@ -231,7 +241,7 @@ body {
 
 /* face5 */
 .wrap #circle .face5 {
-    display: none;
+    display: block;
 }
 .wrap #circle .face5 .inner>div {
     width: 100%;
@@ -264,8 +274,7 @@ body {
 }
 .wrap #circle .face6 .inner>div {
     width: 100%;
-    height: 185px;
-    margin-top: 20px;
+    height: 200px;
 }
 .wrap #circle .face6 .inner>div i {
     width: 22%;
@@ -291,3 +300,173 @@ body {
     font: 18px/1 "arial";
     color: #999;
 }
+
+/* face7 */
+.wrap #circle .face7 {
+    display: block;
+}
+.wrap #circle .face7 .inner>div {
+    width: 100%;
+    height: 100%;
+}
+.wrap #circle .face7 .inner>div>div {
+    width:100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #aaa;
+    box-sizing: border-box;
+}
+.wrap #circle .face7 .inner>div>div video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+}
+.wrap #circle .face7 .inner>div>div h2 {
+    position: absolute;
+    top: 140px;
+    left: 50px;
+    font-size: 40px;
+    color: #fff;
+    text-align: left;
+    line-height: 1.1;
+    text-shadow: 2px 2px 5px #555;
+    z-index: 2;
+}
+.wrap #circle .face7 .inner>div>div img:nth-of-type(1) {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+.wrap #circle .face7 .inner>div>div img:nth-of-type(2) {
+    position: absolute;
+    bottom: 85px;
+    right: -18px;
+    width: 90%;
+}
+
+/* face8 */
+.wrap #circle .face8 {
+    display: block;
+}
+.wrap #circle .face8 .inner>div:nth-of-type(1) {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 20px;
+}
+.wrap #circle .face8 .inner>div:nth-of-type(1) i {
+    color: #fff;
+    font-size: 200px;
+    position:absolute;
+    bottom: 60px;
+    left: 50px;
+    opacity: 0.9;
+}
+.wrap #circle .face8 .inner>div:nth-of-type(1) span {
+    font-weight: bold;
+    font-size: 120px;
+    position: absolute;
+    bottom: 60px;
+    right: 60px;
+}
+.wrap #circle .face8 .inner>div:nth-of-type(1) span em {
+    font: bold normal  60px/1 "arial";
+    position:absolute;
+    right: -20px;
+    top: -20px;
+}
+.wrap #circle .face8 .inner>div:nth-of-type(2) {
+    width: 290px;
+    height: 380px;
+    margin-right: 20px;
+    float: left;
+    text-align: center;
+}
+.wrap #circle .face8 .inner>div:nth-of-type(2) i {
+    font-size: 120px;
+    color: #fff;
+    opacity: 0.8;
+}
+.wrap #circle .face8 .inner>div:nth-of-type(2) h3 {
+    margin-top: 30px;
+    margin-bottom: 14px;
+    font: bold 20px/1 "orbitron";
+}
+.wrap #circle .face8 .inner>div:nth-of-type(2) p {
+    font: 16px/1 "arial";
+    color: #ccc;
+}
+.wrap #circle .face8 .inner>div:nth-of-type(2) h4 {
+    font-size: 40px;
+    margin-top: 20px;
+    letter-spacing: 3px;
+    position: relative;
+}
+.wrap #circle .face8 .inner>div:nth-of-type(2) h4 b {
+    font: bold 24px/1 "arial";
+    color: #bbb;
+    position: absolute;
+    top: 0px;
+    right: 40px;
+}
+.wrap #circle .face8 .inner>div:nth-of-type(3) {
+    width: 290px;
+    height: 380px;
+    float: left;
+    text-align: center;
+}
+.wrap #circle .face8 .inner>div:nth-of-type(3) i {
+    font-size: 120px;
+    color: #fff;
+    opacity: 0.8;
+}
+.wrap #circle .face8 .inner>div:nth-of-type(3) h3 {
+    margin-top: 30px;
+    margin-bottom: 14px;
+    font: bold 20px/1 "orbitron";
+}
+.wrap #circle .face8 .inner>div:nth-of-type(3) p {
+    font: 16px/1 "arial";
+    color: #ccc;
+}
+.wrap #circle .face8 .inner>div:nth-of-type(3) h4 {
+    font-size: 40px;
+    margin-top: 20px;
+    letter-spacing: 3px;
+    position: relative;
+}
+.wrap #circle .face8 .inner>div:nth-of-type(3) h4 b {
+    font: bold 24px/1 "arial";
+    color: #ddd;
+    position: absolute;
+    top: 0px;
+    right: 40px;
+}
+
+/* 3D 배치 */
+.face1 {
+    transform:rotateY(0deg) translateZ(-764px);
+}
+.face2 {
+    transform:rotateY(45deg) translateZ(-764px);
+}
+.face3 {
+    transform:rotateY(90deg) translateZ(-764px);
+}
+.face4 {
+    transform:rotateY(135deg) translateZ(-764px);
+}
+.face5 {
+    transform:rotateY(180deg) translateZ(-764px);
+}
+.face6 {
+    transform:rotateY(225deg) translateZ(-764px);
+}
+.face7 {
+    transform:rotateY(270deg) translateZ(-764px);
+}
+.face8 {
+    transform:rotateY(315deg) translateZ(-764px);
+}
+
